@@ -1,0 +1,136 @@
+/* --- БАЗОВЫЙ НАКИД --- */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #F2C84B;
+    color: #A62103;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* --- СВЯЗАННОЕ С ХЕДЕРОМ --- */
+header {
+    background-color: #F29F05;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    border: 2px solid white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+/* --- НАВИГАЦИЯ В ХЕДЕРЕ --- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* --- СЕРЕДИНА --- */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #F2C84B;
+    border: 1px solid #A62103;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* --- ЦИТАТА ДНЯ --- */
+#citeOfDay {
+    background-color: #F25C05;
+    color: white;
+}
+
+#citeOfDay h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#citeOfDay p {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* --- НОВЫЕ ЦИТАТЫ --- */
+#newQuotes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#newQuotes img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #A62103;
+    padding-left: 10px;
+    margin: 0;
+}
+
+/* --- ПОДНОЖНИК --- */
+footer {
+    background-color: #F28705;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+footer h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* --- ПРОЧАЯ ШНЯГА --- */
+strong, b {
+    color: #A62103;
+}
+
+ins {
+    color: #F25C05;
+}
+
+/* --- ССЫЛКИ --- */
+a {
+    text-decoration: none;
+    color: #F25C05;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #A62103;
+}
+
+/* --- ОТСТУПЫ --- */
+p, blockquote {
+    margin: 10px 0;
+}
