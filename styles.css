@@ -15,6 +15,11 @@ header {
     text-align: center;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 header img {
@@ -46,6 +51,8 @@ nav ul li a {
 /* --- СЕРЕДИНА --- */
 main {
     padding: 20px;
+
+    margin-top: 250px;
 }
 
 section {
@@ -133,4 +140,105 @@ a:hover {
 /* --- ОТСТУПЫ --- */
 p, blockquote {
     margin: 10px 0;
+}
+
+/* --- МЕДИАЗАПРОСЫ --- */
+
+/* --- ДЛЯ ЮЗЕРОВ МИНИ-НОУТОВ И ПЛАНШЕТОВ --- */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #newQuotes img {
+        width: 150px;
+        height: auto;
+    }
+
+    footer h2 {
+        display: none;
+    }
+}
+
+/* --- ДЛЯ ЮЗЕРОВ СМАРТФОНОВ --- */
+@media screen and (max-width: 480px) {
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        margin-top: 300px;
+    }
+
+    #newQuotes {
+        flex-direction: column;
+    }
+
+    #newQuotes img {
+        display: none;
+    }
+}
+
+/* --- ТАБЛИЦА --- */
+
+#quotesMarksTable {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #F2C84B;
+    border: 1px solid #A62103;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#quotesMarksTable h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #A62103;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #A62103;
+}
+
+thead {
+    background-color: #F25C05;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F9E4C8;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FCEED5;
+}
+
+@media screen and (max-width: 768px) {
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        margin-bottom: 10px;
+    }
 }
