@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuItems.forEach((item) => {
         item.addEventListener("mouseenter", () => {
-            item.style.color = "red";
+            item.style.color = "orange";
         });
 
         item.addEventListener("mouseleave", () => {

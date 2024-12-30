@@ -239,7 +239,104 @@ tbody tr:nth-child(odd) {
 
     tbody tr {
         display: grid;
-        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         margin-bottom: 10px;
     }
+}
+
+/* --- ДЛЯ НАВИГАЦИИ --- */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #A62103;
+    border-radius: 3px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    color: #F25C05;
+    text-decoration: underline;
+}
+
+/* --- ДЛЯ СОЗДАНИЯ ТАБЛИЦЫ --- */
+
+form {
+    background-color: #F9E4C8;
+    border: 2px solid #A62103;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+form legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #A62103;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #A62103;
+}
+
+form label input {
+    margin-right: 10px;
+}
+
+form input[type="number"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid #A62103;
+    border-radius: 5px;
+    background-color: #FFF8E5;
+    color: #A62103;
+    width: 100%;
+    max-width: 100px;
+    box-sizing: border-box;
+}
+
+form input[type="number"]:focus {
+    border-color: #F25C05;
+    outline: none;
+}
+
+form button {
+    background-color: #F25C05;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #A62103;
 }

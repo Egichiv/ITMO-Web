@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>ПРЕДЛОЖИТЬ ЦИТАТУ</title>
-  <link rel="stylesheet" href="../styles/subStyles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
   <script src="../scripts/scripts.js" defer></script>
+  <script src="../scripts/tableGenerator.js" defer></script>
 </head>
 
 <body>
@@ -23,6 +24,31 @@
 
 <main>
   <h1>ПРЕДЛОЖИТЬ ЦИТАТУ</h1>
+  <h2>(Создать форму таблицы, чтоб потом отправить на email)</h2>
+  <form id="tableForm">
+    <fieldset>
+      <legend>Настройки таблицы</legend>
+
+      <label>
+        <input type="checkbox" id="authorColumn">
+        Добавить колонку "Автор"
+      </label>
+      <label>
+        <input type="checkbox" id="yearColumn">
+        Добавить колонку "Год"
+      </label>
+      <label>
+        <input type="checkbox" id="ratingColumn">
+        Добавить колонку "Оценка"
+      </label>
+      <label for="rows">Количество цитат:</label>
+      <input type="number" id="rows" name="rows" min="1" required>
+
+      <button type="submit">Создать таблицу</button>
+    </fieldset>
+  </form>
+
+  <div id="tableContainer"></div>
 </main>
 
 <footer>
