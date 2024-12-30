@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     preloader.style.display = "block";
 
-    fetch("https://jsonplaceholder.typicode.com/comments?_limit=10")
+    const startId = Math.floor(Math.random() * (490)) + 1;
+
+    fetch(`https://jsonplaceholder.typicode.com/comments?_start=${startId}&_limit=10`)
         .then((response) => {
             if (!response.ok) {
                 throw new Error("хаха ашибка");
@@ -27,6 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch((error) => {
             preloader.style.display = "none";
-            commentsList.innerHTML = `<p style="color: red;">⚠ ЧТО-ТО ПОШЛО НЕ ПО ПЛАНУ >:( : ${error.message}</p>`;
+            commentsList.innerHTML = `<p style="color: red;">⚠ >:( ЧТО-ТО ПОШЛО НЕ ПО ПЛАНУ: ${error.message}</p>`;
         });
 });
